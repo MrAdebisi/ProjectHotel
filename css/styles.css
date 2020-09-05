@@ -33,11 +33,14 @@ body{
     position: absolute;
     height:100%;
     width: 100%;
+    transition: transform 0.8s ease;
+    z-index: 10;
 }
 
 .animation{
     transition: transform 0.8s ease;
     transform: rotateY(-30deg);
+    cursor: pointer;
 }
 
 .navBar{
@@ -79,17 +82,24 @@ body{
 }
 #menu{
     background-color: var(--sub-color-1);
+    position: relative;
+    cursor: pointer;
 }
-
+.back{
+    background-color: red !important;
+}
+.back a{
+    color: white !important;
+}
+.back i{
+    color: white !important;
+}
 #menu i{
     color:black;
     margin: 0;
     margin-right: 15px;
 }
-#toggle{
-    display: flex; 
-    align-items: center;
-}
+
 #social{
     background-color: transparent;
 }
@@ -103,11 +113,7 @@ body{
 }
 
 #videoBg{
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    height: 100vh;
+    width: 100%;
 }
 
 .sideMenu{
@@ -117,11 +123,18 @@ body{
     margin: auto 5px;
     display: flex;
     margin-top: auto;
+    transition: transform 0.8s ease;
 }
 .sideMenuInner{
     background-color: black;
     height: 100%;
     width: 100%;
+    transform: translateX(-430px);
+}
+
+.slideAnimation{
+    transform: translateX(430px);
+    transition: transform 0.8s ease;
 }
 
 
