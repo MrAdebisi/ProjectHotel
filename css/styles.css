@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#cffffe;
+    --sub-color-1:#f9f7d9;
+    --sub-color-2:#fce2ce;
+    --accent:#ffc1f3;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Lato&family=Poppins:wght@200&display=swap');
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    perspective: 800px;
+}
+.containerLocked{
+    overflow: hidden;
+}
+.inner{
+    transform: transform 0.8s ease;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: relative;
+}
+
+.animation{
+    transition: transform 0.8s ease;
+    transform: rotateY(-30deg);
+}
+
+.navBar{
+    width: 100%;
+    height: 8vh;
+    font-family: 'Poppins',sans-serif;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 4;
+}
+.navLinks{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+}
+.navBar a{
+    text-decoration: none;
+    color: white;
+}
+.navBar i{
+    font-size: 24px;
+    color: white;
+}
+.navContainer{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    margin:0 10px;
+    background-color: var(--sub-color-2);
+    padding: 15px;
+}
+.navContainer a{
+    color: black;
+    font-weight: bold;
+}
+#menu{
+    background-color: var(--sub-color-1);
+}
+
+#menu i{
+    color:black;
+    margin: 0;
+    margin-right: 15px;
+}
+#toggle{
+    display: flex; 
+    align-items: center;
+}
+#social{
+    background-color: transparent;
+}
+#social a{
+    color: white;
+    margin: 5px;
+}
+#social i{
+    margin: 10px;
+}
+
+
+
+
+
+#videoBg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    height: 100vh;
+}
+
+
+
+
+
+
+
