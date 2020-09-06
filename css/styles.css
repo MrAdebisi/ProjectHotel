@@ -23,7 +23,6 @@ body{
     perspective: 800px;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
 }
 .containerLocked{
     overflow: hidden;
@@ -37,10 +36,11 @@ body{
     height:100%;
     width: 100%;
     transition: transform 0.8s ease;
+    position: relative;
     z-index: 10;
 }
 .animation{
-    transition: transform 2s ease;
+    transition: transform 0.8s ease;
     transform: rotateY(-40deg);
     overflow: hidden !important;
 }
@@ -53,9 +53,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 4;
+}
+.sticky{
+    position: fixed;
 }
 .navLinks{
     display: flex;
@@ -146,10 +149,17 @@ body{
     align-items: center;
     align-self: flex-end;
     justify-content: center;
+    cursor: pointer;
     width:60%;
     height: 7%;
     padding: 0rem 2.5rem;
 }
+
+.content{
+    width: 100%;
+    height: 40vh;
+}
+
 
 
 @media only screen and (max-width:590px){
