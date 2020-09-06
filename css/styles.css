@@ -22,36 +22,38 @@ body{
     height: 100vh;
     perspective: 800px;
     display: flex;
+    flex-direction: row;
+    overflow: hidden;
 }
 .containerLocked{
     overflow: hidden;
 }
 .inner{
-    transform: transform 0.8s ease;
     transform-style: preserve-3d;
+    background-color: brown;
     backface-visibility: hidden;
-    position: absolute;
+    flex: 1;
+    overflow: auto;
     height:100%;
     width: 100%;
     transition: transform 0.8s ease;
     z-index: 10;
 }
-
 .animation{
-    transition: transform 0.8s ease;
-    transform: rotateY(-30deg);
-    cursor: pointer;
+    transition: transform 2s ease;
+    transform: rotateY(-40deg);
 }
 
 .navBar{
     width: 100%;
-    height: 8vh;
+    height: 10%;
     font-family: 'Poppins',sans-serif;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
+    top: 0;
     z-index: 4;
 }
 .navLinks{
@@ -63,9 +65,10 @@ body{
 .navBar a{
     text-decoration: none;
     color: white;
+    font-size: calc(14px + 0.2vw);
 }
 .navBar i{
-    font-size: 24px;
+    font-size: calc(14px + 0.2vw);
     color: white;
 }
 .navContainer{
@@ -82,22 +85,15 @@ body{
 }
 #menu{
     background-color: var(--sub-color-1);
+    display: flex;
+    align-items: center;
     position: relative;
     cursor: pointer;
 }
-.back{
-    background-color: red !important;
-}
-.back a{
-    color: white !important;
-}
-.back i{
-    color: white !important;
-}
+
 #menu i{
     color:black;
     margin: 0;
-    margin-right: 15px;
 }
 
 #social{
@@ -113,32 +109,45 @@ body{
 }
 
 #videoBg{
-    width: 100%;
+    width: 100vw;
 }
 
 .sideMenu{
-    width: 22%;
-    height: 80%;
+    width: 40vw;
+    max-width: 400px;
+    height: 100%;
     z-index: 5;
-    margin: auto 5px;
-    display: flex;
-    margin-top: auto;
-    transition: transform 0.8s ease;
 }
 .sideMenuInner{
     background-color: black;
+    padding: 1.2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
     height: 100%;
     width: 100%;
-    transform: translateX(-430px);
+}
+.back{
+    background-color: red !important;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    width:60%;
+    height: 7%;
+    padding: 0rem 2.5rem;
 }
 
-.slideAnimation{
-    transform: translateX(430px);
-    transition: transform 0.8s ease;
+
+@media only screen and (max-width:590px){
+    .navBar a{
+        display: none;
+    }
 }
-
-
-
 
 
 
