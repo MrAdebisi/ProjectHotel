@@ -42,6 +42,7 @@ body{
 .animation{
     transition: transform 2s ease;
     transform: rotateY(-40deg);
+    overflow: hidden !important;
 }
 
 .navBar{
@@ -79,9 +80,13 @@ body{
     background-color: var(--sub-color-2);
     padding: 15px;
 }
+.navLinks i{
+    color: black;
+}
 .navContainer a{
     color: black;
     font-weight: bold;
+    margin:0 10px;
 }
 #menu{
     background-color: var(--sub-color-1);
@@ -91,10 +96,6 @@ body{
     cursor: pointer;
 }
 
-#menu i{
-    color:black;
-    margin: 0;
-}
 
 #social{
     background-color: transparent;
@@ -146,6 +147,9 @@ body{
 @media only screen and (max-width:590px){
     .navBar a{
         display: none;
+    }
+    .sideMenu{
+        width: 60vw;
     }
 }
 
