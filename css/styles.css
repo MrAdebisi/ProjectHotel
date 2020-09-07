@@ -144,6 +144,7 @@ body{
 }
 .imgContainer img{
     width: 40%;
+    min-width: 100px;
 }
 
 .sideMenu{
@@ -179,7 +180,51 @@ body{
 
 .content{
     width: 100%;
-    height: 40vh;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10rem 0;
+}
+
+.innerContentWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(229, 226, 226);
+}
+.textWrap{
+    height: fit-content;
+    min-width: 300px;
+    flex: 0.5;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+}
+.textWrap h1{
+    font-size: calc(23px + 0.2vw);
+    font-family: 'Cinzel',serif;
+    font-weight: 200;
+    margin: 1rem 0;
+}
+.textWrap p{
+    font-size: calc(14px + 0.1vw);
+    line-height: 30px;
+}
+.textWrap p, h4{
+    font-family: 'Lato',sans-serif;
+    font-weight: 200;
+}
+.innerContentWrap img{
+    width: 40%;
+    min-width: 300px;
+    position: relative;
+    top: -4rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -191,7 +236,18 @@ body{
     .sideMenu{
         width: 60vw;
     }
+    .textWrap h1{
+        font-size: calc(22px + 0.2vw);
+    }
+    .innerContentWrap{
+        flex-direction: column-reverse;
+    }
+    .innerContentWrap img{
+        position: static;
+        margin: 1rem;
+    }
 }
+
 
 
 
