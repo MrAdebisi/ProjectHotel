@@ -8,7 +8,7 @@ console.log(scrollValue);
 inner.scroll(function(){
     var offsetValue = this.scrollTop;
     if(offsetValue > navHeight){
-        nav.addClass('sticky')
+        nav.addClass('sticky');
     }
     else if(offsetValue < navHeight){
         nav.removeClass('sticky');
